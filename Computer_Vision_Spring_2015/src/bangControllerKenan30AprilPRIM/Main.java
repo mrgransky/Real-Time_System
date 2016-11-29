@@ -41,6 +41,7 @@ public class Main {
 		visionProcessing.setSmoothedAngle(opcomSignals.getSmoothedAngle());
 		visionProcessing.setSmoothedAngleDer(opcomSignals.getSmoothedAngleDer());
 		visionProcessing.setCartXCorrdinate(opcomSignals.getCartXCoordinate());
+		visionProcessing.setCartVel(opcomSignals.getCartVel());
 		visionProcessing.setRegul(regul);
 		
 		opcomCOM = new OpComCartCoommunication();

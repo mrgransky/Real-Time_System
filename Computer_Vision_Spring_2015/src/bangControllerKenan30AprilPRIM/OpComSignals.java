@@ -13,19 +13,22 @@ public class OpComSignals {
 	private SignalAndPlotter smoothedAngle;
 	private SignalAndPlotter smoothedAngleDer;
 	private SignalAndPlotter cartXCoordinate;
+	private SignalAndPlotter cartVel;
+	
 
 
 	public OpComSignals(){
 		this.angle = new SignalAndPlotter("angle", 0, -30, 30, (long) 10 ); 
 		this.angleReal = new SignalAndPlotter("angle Real", 0, -30, 30, (long) 10 ); 
-		this.visionProcessingTime = new SignalAndPlotter("VisionProcessingTime", 0, 0, 200, (long) 42 );
+		this.visionProcessingTime = new SignalAndPlotter("VisionProcessingTime", 0, 20, 40, (long) 42 );
 		this.beamXCorrdinate = new SignalAndPlotter("beamXCorrdinate", 0, -10, 650, (long) 42 );
 		this.beamYCorrdinate = new SignalAndPlotter("beamYCorrdinate", 0, -10, 490, (long) 42 );
 		this.nbrOfGreenCircles = new SignalAndPlotter("nbeOfGreenCircles", 0, 0, 3, (long) 42 );
 		this.nbrOfRedCircles = new SignalAndPlotter("nbrOfRedCircles" , 0, 0, 3, (long) 42);
-		this.smoothedAngle = new SignalAndPlotter("smoothedAngle" , 0, -30, 30, (long) 42);
+		this.smoothedAngle = new SignalAndPlotter("smoothedAngle" , 0, -180, 180, (long) 42);
 		this.smoothedAngleDer = new SignalAndPlotter("smoothedAngleDer" , 0, -1000, 1000, (long) 42);
-		this.cartXCoordinate = new SignalAndPlotter("cartXCoordinate" , 0, 150, 580, (long) 42);
+		this.cartXCoordinate = new SignalAndPlotter("cartXCoordinate" , 0, 0, 640, (long) 42);
+		this.cartVel = new SignalAndPlotter("cartVel CV [pixels/sec]" , 0, -100, 100, (long) 10);
 		
 	}
 
@@ -63,6 +66,10 @@ public class OpComSignals {
 	
 	public SignalAndPlotter getAngleReal(){
 		return this.angleReal;
+	}
+	
+	public SignalAndPlotter getCartVel(){
+		return this.cartVel;
 	}
 
 
